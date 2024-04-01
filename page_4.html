@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet" />
+    <title>Hello, world!</title>
+
+    <style>
+      .header-top-icon a {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        color: #ff0c0e;
+      }
+
+      .biz-btn {
+        background-color: #ff0c0e;
+        color: white !important;
+      }
+
+      .header-top-icon a:hover {
+        color: #12bcff;
+      }
+
+      .header {
+        padding: 0px;
+      }
+
+      .header .nav-item {
+        font-family: "Roboto Serif", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        padding: 10px 0px;
+      }
+
+      .header .nav-item.active,
+      .header .nav-item:hover {
+        border-bottom: 3px solid #ff0c0e;
+        color: #12bcff !important;
+      }
+
+      .header .nav-item.active .nav-link,
+      .header .nav-item:hover .nav-link {
+        color: #12bcff !important;
+      }
+
+      .category-card {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        background: linear-gradient(to right, #ff0c0e, #12bcff);
+        color: white;
+      }
+
+      .category-list-card {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .category-list-card:hover {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        transform: translateX(2px);
+      }
+
+      .bg-img {
+        height: 270px;
+        background-image: url(./images/bg-img.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .trans-bg {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .banner input , .banner button{
+        border-radius: 50px;
+        border: 1px solid #12bcff;
+      }
+
+      .banner .title {
+        color: #12bcff;
+      }
+
+      .advertise {
+        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+      }
+
+      .advertise .btn {
+        background-color: #ff0c0e;
+        color: white;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+      .price-card .card {
+        background-color: #f5f6f7;
+        box-shadow: -4px -2px 4px 0px #ffffff, 4px 2px 6px 0px #dfe4ea;
+        transition: transform 0.5s ease-in-out;
+        position: relative;
+      }
+
+      .price-card .card:hover {
+        transform: scale(1.03);
+      }
+
+      .price-card .card-header {
+        background-color: #060047;
+        border-bottom-right-radius: 40px;
+      }
+
+      .price-card .row .col:nth-child(1) .feature-icon {
+        color: #9b0000;
+      }
+
+      .price-card .row .col:nth-child(2) .feature-icon {
+        color: #f76e11;
+      }
+
+      .price-card .row .col:nth-child(3) .feature-icon {
+        color: #3bb210;
+      }
+
+      .price-card .row .col:nth-child(4) .feature-icon {
+        color: #8a39e1;
+      }
+
+      .price-card .ribbon {
+        top: -10px;
+        left: -10px;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        position: absolute;
+      }
+
+      .price-card .ribbon::before,
+      .price-card .ribbon::after {
+        position: absolute;
+        content: "";
+        display: block;
+        border-top-color: transparent;
+        border-left-color: transparent;
+      }
+
+      .price-card .row .col:nth-child(1) .ribbon::before,
+      .price-card .row .col:nth-child(1) .ribbon::after {
+        border: 7px solid #740606;
+      }
+
+      .price-card .row .col:nth-child(2) .ribbon::before,
+      .price-card .row .col:nth-child(2) .ribbon::after {
+        border: 7px solid #873803;
+      }
+
+      .price-card .row .col:nth-child(3) .ribbon::before,
+      .price-card .row .col:nth-child(3) .ribbon::after {
+        border: 7px solid #206407;
+      }
+
+      .price-card .row .col:nth-child(4) .ribbon::before,
+      .price-card .row .col:nth-child(4) .ribbon::after {
+        border: 7px solid #3b0376;
+      }
+
+      .price-card .ribbon::before {
+        top: 0;
+        right: 17px;
+      }
+
+      .price-card .ribbon::after {
+        bottom: 15px;
+        left: -2px;
+      }
+
+      .price-card .ribbon span {
+        width: 200px;
+        padding: 10px 0;
+        color: #fff;
+        text-align: center;
+        top: 30px;
+        right: 0;
+        transform: rotate(-45deg);
+        position: absolute;
+        z-index: -1;
+      }
+
+      .price-card .row .col:nth-child(1) .ribbon span,
+      .price-card .row .col:nth-child(1) .card-footer {
+        background-color: #9b0000;
+      }
+
+      .price-card .row .col:nth-child(2) .ribbon span,
+      .price-card .row .col:nth-child(2) .card-footer {
+        background-color: #f76e11;
+      }
+
+      .price-card .row .col:nth-child(3) .ribbon span,
+      .price-card .row .col:nth-child(3) .card-footer {
+        background-color: #3bb210;
+      }
+
+      .price-card .row .col:nth-child(4) .ribbon span,
+      .price-card .row .col:nth-child(4) .card-footer {
+        background-color: #8a39e1;
+      }
+
+      .price-card .order-btn {
+        transition: all 0.5s;
+      }
+
+      .price-card .order-btn span {
+        transition: 0.5s;
+      }
+
+      .price-card .order-btn span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .price-card .order-btn:hover span {
+        padding-right: 20px;
+      }
+
+      .price-card .order-btn:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid container py-1 header-top-icon">
+      <div class="d-flex justify-content-between align-items-center">
+        <img src="./images/logo2.png" class="img-fluid" alt="..." title="..." style="max-height: 50px; width: auto" />
+
+        <!-- <div class="row">
+          <a href="http://" class="rounded-circle text-center mr-2" data-toggle="tooltip" data-placement="top" title="Notifications" style="text-decoration: none; width: 30px; height: 30px">
+            <i class="bi bi-bell-fill" style="font-size: large"></i>
+          </a>
+
+          <a href="http://" class="rounded-circle text-center mr-2" data-toggle="tooltip" data-placement="top" title="Searches" style="text-decoration: none; width: 30px; height: 30px">
+            <i class="bi bi-search" style="font-size: large"></i>
+          </a>
+
+          <a href="http://" class="rounded-circle text-center mr-2" data-toggle="tooltip" data-placement="top" title="Call" style="text-decoration: none; width: 30px; height: 30px">
+            <i class="bi bi-telephone-fill" style="font-size: large"></i>
+          </a>
+
+          <a href="http://" class="rounded-circle text-center mr-2" data-toggle="tooltip" data-placement="top" title="Chat" style="text-decoration: none; width: 30px; height: 30px">
+            <i class="bi bi-chat-dots-fill" style="font-size: large"></i>
+          </a>
+
+          <a href="http://" class="rounded-circle text-center mr-2" data-toggle="tooltip" data-placement="top" title="Business Listing" style="text-decoration: none; width: 30px; height: 30px">
+            <i class="bi bi-card-list" style="font-size: large"></i>
+          </a>
+        </div> -->
+
+        <a href="http://" class="btn biz-btn">Business Listing</a>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top header">
+      <div class="container-fluid container-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">All</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Suv</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Sewen</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Hatchback</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Electric</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Motorcycles</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Van</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Bus</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Pickup</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Service</a>
+            </li>
+
+            <li class="nav-item mr-0 mr-lg-4">
+              <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid container-lg bg-img mt-4 rounded banner">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+          <h5 class="mb-5 title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+        <div class="trans-bg p-4 pl-5 rounded" style="width: 80%;">
+          <form>
+            <div class="row">
+              <div class="col-12 col-md-5 px-1">
+                <input type="text" class="form-control" placeholder="Location..." />
+              </div>
+              <div class="col-12 col-md-5 px-1">
+                <input type="text" class="form-control" placeholder="Keywords..." />
+              </div>
+              <div class="col-12 col-md-2 px-1">
+                <button type="submit" class="btn btn-primary mb-2 px-4">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-lg py-5">
+        <div class="card border-0 advertise">
+          <div class="card-body py-3">
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <img src="./images/car_care.png" alt="" title="" style="width: auto; height: 80px" />
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 text-center">
+                    <h5>We Provide High Quality Auto Polish Service In UAE</h5>
+                    <button type="button" class="btn btn mt-2">To Know More Visit Us</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container-lg py-3">
+      <div class="card category-card border-0">
+        <div class="card-body py-2">
+          <img src="./images/maintenance.png" alt="" title="" style="width: 50px; height: 50px" />
+          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Topic Name here</span>
+        </div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-4 row-cols-md-6 my-3">
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-lg py-3">
+      <div class="card category-card border-0">
+        <div class="card-body py-2">
+          <img src="./images/maintenance.png" alt="" title="" style="width: 50px; height: 50px" />
+          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Topic Name here</span>
+        </div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-4 row-cols-md-6 my-3">
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-lg py-3">
+      <div class="card category-card border-0">
+        <div class="card-body py-2">
+          <img src="./images/maintenance.png" alt="" title="" style="width: 50px; height: 50px" />
+          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Topic Name here</span>
+        </div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-4 row-cols-md-6 my-3">
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5 price-card">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+        <div class="col">
+          <div class="position-relative h-100">
+            <div class="ribbon position-absolute">
+              <span class="text-uppercase ribbon-text">STANDARD</span>
+            </div>
+            <div class="card border-0 h-100">
+              <div class="card-header text-center text-white">
+                <i class="bi bi-star-fill fs-1 feature-icon"></i>
+                <div class="d-flex justify-content-center align-items-end">
+                  <span class="fs-3">$10.75</span>
+                  <span class="fs-5 mb-1" style="font-size: small">/month</span>
+                </div>
+                <h6 class="text-decoration-line-through text-danger">$10.75/month</h6>
+                <span class="text-uppercase text-info" style="font-size: small">Minimum 6 months contract</span>
+              </div>
+              <div class="card-body px-0 pb-0">
+                <div class="table-responsive">
+                  <table class="table align-middle table-sm mb-0">
+                    <tbody class="fw-semibold">
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a class="btn fw-semibold fs-5 d-block rounded-5 text-white order-btn text-center" href="#" role="button"><span class="position-relative d-inline-block">Let's Do It</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="position-relative h-100 price-card">
+            <div class="ribbon position-absolute">
+              <span class="text-uppercase ribbon-text">PROFESSIONAL</span>
+            </div>
+            <div class="card border-0 h-100">
+              <div class="card-header text-center text-white">
+                <i class="bi bi-stars fs-1 feature-icon"></i>
+                <div class="d-flex justify-content-center align-items-end">
+                  <span class="fs-3">$10.75</span>
+                  <span class="fs-5 mb-1" style="font-size: small">/month</span>
+                </div>
+                <h6 class="text-decoration-line-through text-danger">$10.75/month</h6>
+                <span class="text-uppercase text-info" style="font-size: small">Minimum 6 months contract</span>
+              </div>
+              <div class="card-body px-0 pb-0">
+                <div class="table-responsive">
+                  <table class="table align-middle table-sm mb-0">
+                    <tbody class="fw-semibold">
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a class="btn fw-semibold fs-5 d-block rounded-5 text-white order-btn text-center" href="#" role="button"><span class="position-relative d-inline-block">Let's Do It</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="position-relative h-100 price-card">
+            <div class="ribbon position-absolute">
+              <span class="text-uppercase ribbon-text">Recommented</span>
+            </div>
+            <div class="card border-0 h-100">
+              <div class="card-header text-center text-white">
+                <i class="bi bi-check2-circle fs-1 feature-icon"></i>
+                <div class="d-flex justify-content-center align-items-end">
+                  <span class="fs-3">$10.75</span>
+                  <span class="fs-5 mb-1" style="font-size: small">/month</span>
+                </div>
+                <h6 class="text-decoration-line-through text-danger">$10.75/month</h6>
+                <span class="text-uppercase text-info" style="font-size: small">Minimum 6 months contract</span>
+              </div>
+              <div class="card-body px-0 pb-0">
+                <div class="table-responsive">
+                  <table class="table align-middle table-sm mb-0">
+                    <tbody class="fw-semibold">
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a class="btn fw-semibold fs-5 d-block rounded-5 text-white order-btn text-center" href="#" role="button"><span class="position-relative d-inline-block">Let's Do It</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="position-relative h-100 price-card">
+            <div class="ribbon position-absolute">
+              <span class="text-uppercase ribbon-text">PREMIUM</span>
+            </div>
+            <div class="card border-0 h-100">
+              <div class="card-header text-center text-white">
+                <i class="bi bi-gem fs-1 feature-icon"></i>
+                <div class="d-flex justify-content-center align-items-end">
+                  <span class="fs-3">$10.75</span>
+                  <span class="fs-5 mb-1" style="font-size: small">/month</span>
+                </div>
+                <h6 class="text-decoration-line-through text-danger">$10.75/month</h6>
+                <span class="text-uppercase text-info" style="font-size: small">Minimum 6 months contract</span>
+              </div>
+              <div class="card-body px-0 pb-0">
+                <div class="table-responsive">
+                  <table class="table align-middle table-sm mb-0">
+                    <tbody class="fw-semibold">
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-check-lg fs-5 text-success"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>10 Keyword Research</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>2 contextual and editorial guest posts</td>
+                      </tr>
+                      <tr class="align-middle" style="font-size: small">
+                        <td><i class="bi bi-x fs-5 text-danger"></i></td>
+                        <td>Dedicated client dashboard</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a class="btn fw-semibold fs-5 d-block rounded-5 text-white order-btn text-center" href="#" role="button"><span class="position-relative d-inline-block">Let's Do It</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>
