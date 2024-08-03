@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!--     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
     <title>Hello, world!</title>
 
     <style>
+      body {
+        /* font-family: "Playfair Display", serif; */
+      }
+
       .header-top-icon a {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
         color: #ff0c0e;
@@ -19,6 +28,7 @@
       .biz-btn {
         background-color: #ff0c0e;
         color: white !important;
+        font-weight: 500;
       }
 
       .header-top-icon a:hover {
@@ -27,24 +37,27 @@
 
       .header {
         padding: 0px;
+        background: linear-gradient(to right, #ff0c0e, #12bcff);
+        color: white !important;
       }
 
       .header .nav-item {
-        font-family: "Roboto Serif", serif;
+        font-family: "Playfair Display", serif;
         font-optical-sizing: auto;
+        font-weight: 500;
         font-style: normal;
         padding: 10px 0px;
       }
 
       .header .nav-item.active,
       .header .nav-item:hover {
-        border-bottom: 3px solid #ff0c0e;
-        color: #12bcff !important;
+        border-bottom: 3px solid #000000;
+        color: #000000 !important;
       }
 
       .header .nav-item.active .nav-link,
       .header .nav-item:hover .nav-link {
-        color: #12bcff !important;
+        color: #000000 !important;
       }
 
       .category-card {
@@ -63,6 +76,11 @@
         transform: translateX(2px);
       }
 
+      .category-list-card .card-title {
+        font-size: small !important;
+        text-wrap: nowrap;
+      }
+
       .bg-img {
         height: 270px;
         background-image: url(./images/bg-img.jpg);
@@ -75,8 +93,20 @@
         background-color: rgba(0, 0, 0, 0.5);
       }
 
-      .banner input , .banner button{
-        border-radius: 50px;
+      .banner select {
+        border-top-left-radius: 50px !important;
+        border-bottom-left-radius: 50px !important;
+        border: 1px solid #12bcff;
+      }
+
+      .banner input {
+        border-top: 1px solid #12bcff;
+        border-bottom: 1px solid #12bcff;
+      }
+
+      .banner button {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
         border: 1px solid #12bcff;
       }
 
@@ -85,24 +115,13 @@
       }
 
       .advertise {
-        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+        box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.11);
       }
 
       .advertise .btn {
         background-color: #ff0c0e;
         color: white;
       }
-
-
-
-
-
-
-
-
-
-
-
 
       .price-card .card {
         background-color: #f5f6f7;
@@ -117,6 +136,7 @@
 
       .price-card .card-header {
         background-color: #060047;
+        background-color: red;
         border-bottom-right-radius: 40px;
       }
 
@@ -275,7 +295,7 @@
       </div>
     </div>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top header">
+    <nav class="navbar navbar-expand-md sticky-top header">
       <div class="container-fluid container-lg">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -288,43 +308,19 @@
             </li>
 
             <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">All</a>
+              <a class="nav-link text-white" href="#">About</a>
             </li>
 
             <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Suv</a>
+              <a class="nav-link text-white" href="#">Business Listing</a>
             </li>
 
             <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Sewen</a>
+              <a class="nav-link text-white" href="#">Experts</a>
             </li>
 
             <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Hatchback</a>
-            </li>
-
-            <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Electric</a>
-            </li>
-
-            <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Motorcycles</a>
-            </li>
-
-            <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Van</a>
-            </li>
-
-            <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Bus</a>
-            </li>
-
-            <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Pickup</a>
-            </li>
-
-            <li class="nav-item mr-0 mr-lg-4">
-              <a class="nav-link text-white" href="#">Service</a>
+              <a class="nav-link text-white" href="#">Products</a>
             </li>
 
             <li class="nav-item mr-0 mr-lg-4">
@@ -336,19 +332,28 @@
     </nav>
 
     <div class="container-fluid container-lg bg-img mt-4 rounded banner">
-        <div class="d-flex flex-column justify-content-center align-items-center h-100">
-          <h5 class="mb-5 title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
-        <div class="trans-bg p-4 pl-5 rounded" style="width: 80%;">
+      <div class="d-flex flex-column justify-content-center align-items-center h-100">
+        <h5 class="mb-5 title">The best place to explore your favourite business.</h5>
+
+        <div class="trans-bg p-4 rounded" style="width: 60%">
           <form>
             <div class="row">
-              <div class="col-12 col-md-5 px-1">
-                <input type="text" class="form-control" placeholder="Location..." />
+              <div class="col-12 col-md-3 offset-md-1 px-0">
+                <select class="custom-select rounded-0">
+                  <option value="1">UAE</option>
+                  <option value="2">USA</option>
+                  <option value="3">UK</option>
+                </select>
               </div>
-              <div class="col-12 col-md-5 px-1">
-                <input type="text" class="form-control" placeholder="Keywords..." />
+
+              <div class="col-12 col-md-6 px-0">
+                <input type="text" class="form-control border-left-0 border-right-0 rounded-0" placeholder="Keywords..." />
               </div>
-              <div class="col-12 col-md-2 px-1">
-                <button type="submit" class="btn btn-primary mb-2 px-4">Search</button>
+
+              <div class="col-12 col-md-2 px-0">
+                <button type="submit" class="btn btn-primary mb-2 px-4 border-left-0">
+                  <i class="bi bi-search"></i>
+                </button>
               </div>
             </div>
           </form>
@@ -356,7 +361,7 @@
       </div>
     </div>
 
-    <div class="container-fluid container-lg py-5">
+    <!-- <div class="container-fluid container-lg py-5">
         <div class="card border-0 advertise">
           <div class="card-body py-3">
             <div class="row">
@@ -372,18 +377,138 @@
             </div>
           </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="container-fluid container-lg py-3">
       <div class="card category-card border-0">
         <div class="card-body py-2">
           <img src="./images/maintenance.png" alt="" title="" style="width: 50px; height: 50px" />
-          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Topic Name here</span>
+          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Products</span>
         </div>
       </div>
 
       <div class="row row-cols-2 row-cols-md-4 row-cols-md-6 my-3">
-        <div class="col">
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Car Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Truck Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Electronics parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Bike Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Yachts Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Hardware and Tools</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Machine Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Auto Spare Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Electronics Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Industrial Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Safety & Secuirity</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Construction & Machinary</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Mobile & Computer</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Office Equipment</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
@@ -391,7 +516,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
@@ -399,283 +524,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid container-lg py-3">
-      <div class="card category-card border-0">
-        <div class="card-body py-2">
-          <img src="./images/maintenance.png" alt="" title="" style="width: 50px; height: 50px" />
-          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Topic Name here</span>
-        </div>
-      </div>
-
-      <div class="row row-cols-2 row-cols-md-4 row-cols-md-6 my-3">
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
-            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
-            <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
-            </div>
-          </div>
-        </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
@@ -690,152 +539,308 @@
       <div class="card category-card border-0">
         <div class="card-body py-2">
           <img src="./images/maintenance.png" alt="" title="" style="width: 50px; height: 50px" />
-          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Topic Name here</span>
+          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Business Listing</span>
         </div>
       </div>
 
       <div class="row row-cols-2 row-cols-md-4 row-cols-md-6 my-3">
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Auto Spare Parts</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Electronics Parts</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Industrial Parts</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Safety & Secuirity</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Construction & Machinary</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Mobile & Computer</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Office Equipment</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-2">
           <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
             <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
             <div class="card-body text-center py-1">
-              <span class="card-title" style="font-weight: 500; font-size: 1rem">Name Here</span>
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-lg py-3">
+      <div class="card category-card border-0">
+        <div class="card-body py-2">
+          <img src="./images/maintenance.png" alt="" title="" style="width: 50px; height: 50px" />
+          <span class="ml-2" style="font-weight: 500; font-size: 1.2rem">Experts</span>
+        </div>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-4 row-cols-md-6 my-3">
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Auto Spare Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Electronics Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Industrial Parts</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Safety & Secuirity</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Construction & Machinary</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Mobile & Computer</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Office Equipment</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
+            </div>
+          </div>
+        </div>
+        <div class="col px-2">
+          <div class="card category-list-card py-1 my-2 border-0" style="width: 100%">
+            <img class="card-img-top d-block m-auto" src="./images/technology.png" alt="..." title="..." style="width: 3rem; height: 3rem" />
+            <div class="card-body text-center py-1">
+              <span class="card-title" style="font-weight: 500; font-size: 1rem">Home Appliance</span>
             </div>
           </div>
         </div>
